@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
@@ -58,7 +59,7 @@ public class BookServiceImplTest {
 
     private void stubRepositoryToReturnExistingUser() {
         final Book book = UserUtil.createBook();
-        when(bookRepository.findOne(book.getId())).thenReturn(book);
+        when(bookRepository.findById(book.getId())).thenReturn(Optional.of(book));
     }
 
     @Test
