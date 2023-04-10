@@ -1,13 +1,13 @@
 package pl.finsys.example.controller;
 
-import pl.finsys.example.domain.Book;
-import pl.finsys.example.service.BookService;
-import pl.finsys.example.util.UserUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
+import pl.finsys.example.domain.Book;
+import pl.finsys.example.service.BookService;
+import pl.finsys.example.util.UserUtil;
 
 import java.util.Collection;
 
