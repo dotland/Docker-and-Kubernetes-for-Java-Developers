@@ -1,8 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rest-example
 spec:
+  selector:
+    matchLabels:
+      app: rest-example
+      tier: backend
   replicas: 1
   template:
     metadata:
@@ -12,7 +16,7 @@ spec:
     spec:
       containers:
       - name: rest-example
-        image: jotka/rest-example
+        image: stigran/rest-example
         imagePullPolicy: IfNotPresent
         resources:
           requests:
